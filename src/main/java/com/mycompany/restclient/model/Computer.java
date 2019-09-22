@@ -11,18 +11,30 @@ public class Computer implements Serializable{
     private String operationalSystem;
     private int cores;
     private boolean hasAccessories;
+    private String name;
+    private float value;
+    private int serialNumber;
+    private String brand;
 
-    public Computer(String operationalSystem, int cores, boolean hasAccessories) {
+    public Computer(String operationalSystem, int cores, boolean hasAccessories, String name, float value, int serialNumber, String brand) {
         this.operationalSystem = operationalSystem;
         this.cores = cores;
         this.hasAccessories = hasAccessories;
+        this.name = name;
+        this.value = value;
+        this.serialNumber = serialNumber;
+        this.brand = brand;
     }
     
-    public Computer(int id, String operationalSystem, int cores, boolean hasAccessories){
+    public Computer(int id, String operationalSystem, int cores, boolean hasAccessories, String name, float value, int serialNumber, String brand){
         this.id = id;
         this.operationalSystem = operationalSystem;
         this.cores = cores;
         this.hasAccessories = hasAccessories;
+        this.name = name;
+        this.value = value;
+        this.serialNumber = serialNumber;
+        this.brand = brand;
     }
 
     public Computer(){}
@@ -68,5 +80,36 @@ public class Computer implements Serializable{
         this.hasAccessories = hasAccessories;
     }
     
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public float getValue() {
+        return value;
+    }
+
+    public void setValue(float value) {
+        this.value = value;
+    }
+
+    public int getSerialNumber() {
+        return serialNumber;
+    }
+
+    public void setSerialNumber(int serialNumber) {
+        this.serialNumber = serialNumber;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
     
 }

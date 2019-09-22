@@ -52,7 +52,7 @@ public class RestService {
         ResponseEntity<?> response = this.restTemplate
                 .postForEntity(uri, entity, className);
         
-        if(response.getStatusCode() == HttpStatus.CREATED){
+        if(response.getStatusCode() == HttpStatus.OK){
             return response.getBody();
         }else{
             return null;
