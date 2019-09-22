@@ -60,9 +60,7 @@ public class RestService {
 
     }
     
-    public Object put(String uri, Object object, int id){
-        
-        uri += "/{id}";
+    public Object put(String uri, Object object){
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
@@ -73,8 +71,7 @@ public class RestService {
                 .restTemplate.exchange(uri, 
                         HttpMethod.PUT,
                         entity,
-                        className,
-                        id);
+                        className);
         
         if(response.getStatusCode() == HttpStatus.OK){
             return response.getBody();

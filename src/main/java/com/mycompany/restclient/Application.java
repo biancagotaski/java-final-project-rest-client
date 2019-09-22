@@ -41,22 +41,21 @@ public class Application implements CommandLineRunner{
 //        }
         
         //GetById
-//        int id = 33;
+        int id = 33;
 //        Class voGet = Loan.class;
 //        Object retornoGet = restService.get(uri, voGet, id);
 //        Loan lo3 = (Loan) retornoGet;
 //        System.out.println(lo3.getId());
         
         //Post
-        Loan newLoan = new Loan(2, "22/09/2019", "22/01/2020", "154.565.555-40");
-        Loan retornoLoan = (Loan) restService.post(uri, newLoan);
-        System.out.println(retornoLoan.getId());
+//        Loan newLoan = new Loan(2, "22/09/2019", "22/01/2020", "154.565.555-40");
+//        Loan retornoLoan = (Loan) restService.post(uri, newLoan);
+//        System.out.println(retornoLoan.getId());
         
         //Put
-//        int idPut = 1;
-//        Loan loanChanged = new Loan(3, "17/05/2019", "18/07/2019", "154.565.555-40");
-//        Loan retornoAlterar = (Loan) restService.put(uri, loanChanged, id);
-//        System.out.println(retornoAlterar.getId());
+        Loan loanChanged = new Loan(1, "17/05/2019", "18/07/2019", "154.565.555-40");
+        Loan retornoAlterar = (Loan) restService.put(uri + "/" + loanChanged.getId(), loanChanged);
+        System.out.println(retornoAlterar.getId());
         
         //Delete
 //        restService.delete(uri, 33);
