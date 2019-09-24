@@ -33,24 +33,24 @@ public class Application implements CommandLineRunner{
         System.err.println(json);
         
         //GetAll
-//        Class vo = Loan[].class;
-//        Object retorno = restService.get(uri, vo);
-//        Loan[] loans = (Loan[]) retorno;
-//        for(Loan loan: loans){
-//            System.out.println(loan.getCpfCustomer());
-//        }
+        Class vo = Loan[].class;
+        Object retorno = restService.get(uri, vo);
+        Loan[] loans = (Loan[]) retorno;
+        for(Loan loan: loans){
+            System.out.println(loan.getCpfCustomer());
+        }
         
         //GetById
         int id = 33;
-//        Class voGet = Loan.class;
-//        Object retornoGet = restService.get(uri, voGet, id);
-//        Loan lo3 = (Loan) retornoGet;
-//        System.out.println(lo3.getId());
+        Class voGet = Loan.class;
+        Object retornoGet = restService.get(uri, voGet, id);
+        Loan lo3 = (Loan) retornoGet;
+        System.out.println(lo3.getId());
         
         //Post
-//        Loan newLoan = new Loan(2, "22/09/2019", "22/01/2020", "154.565.555-40");
-//        Loan retornoLoan = (Loan) restService.post(uri, newLoan);
-//        System.out.println(retornoLoan.getId());
+        Loan newLoan = new Loan(2, "22/09/2019", "22/01/2020", "154.565.555-40");
+        Loan retornoLoan = (Loan) restService.post(uri, newLoan);
+        System.out.println(retornoLoan.getId());
         
         //Put
         Loan loanChanged = new Loan(1, "17/05/2019", "18/07/2019", "154.565.555-40");
@@ -58,37 +58,6 @@ public class Application implements CommandLineRunner{
         System.out.println(retornoAlterar.getId());
         
         //Delete
-//        restService.delete(uri, 33);
-        
-        //####################################################################
-        
-        //GetAll
-//        Class vo = Computer[].class;
-//        Object retorno = restService.get(uri, vo);
-//        Computer[] computers = (Computer[]) retorno;
-//        for(Computer comp: computers){
-//            System.out.println(comp.getOperationalSystem());
-//        }
-        
-//        //GetById
-//        int id = 1;
-//        Class voGet = Computer.class;
-//        Object retornoGet = restService.get(uri, voGet, id);
-//        Computer comp3 = (Computer) retornoGet;
-//        System.out.println(comp3.getId());
-//        
-//        //Post
-//        Computer newComputer = new Computer(2, "Windows", 8, true, "Asus PC", 2700, 54545, "Asus");
-//        Computer retornoComputer = (Computer) restService.post(uri, newComputer);
-//        System.out.println(retornoComputer.getId());
-//        
-//        //Put
-//        int idPut = 1;
-//        Computer computerChanged = new Computer(3, "Windows", 8, false, "Asus PC", 2700, 54545, "Asus");
-//        Computer retornoAlterar = (Computer) restService.put(uri, computerChanged, id);
-//        System.out.println(retornoAlterar.getId());
-//        
-//        //Delete
-//        restService.delete(uri, 33);
+        restService.delete(uri, 167);
     }
 }
